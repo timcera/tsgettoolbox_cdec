@@ -27,7 +27,7 @@ Python and 3.10+.
 
 Documentation
 -------------
-Reference documentation is at `tsgettoolbox_cdec_documentation`_.
+Reference documentation is at `tsgettoolbox CDEC API`_.
 
 Installation
 ------------
@@ -78,14 +78,14 @@ To use the tsgettoolbox in a project::
     df = tsgettoolbox.cdec("PRA", start_date="2000-01-01", end_date="2000-02-01")
     print(df.head())
 
-Refer to the API Documentation at `tsgettoolbox_cdec_api`_.
+Refer to the API Documentation at `tsgettoolbox CDEC API`_.
 
 Usage Summary - Command Line
 ----------------------------
 
     tsgettoolbox cdec --start_date 2000-01-01 --end_date 2000-02-01 "PRA" > output.csv
 
-Refer to the command line documentation at `tsgettoolbox_cli`_.
+Refer to the command line documentation at `tsgettoolbox CLI`_.
 
 Development
 ~~~~~~~~~~~
@@ -93,6 +93,6 @@ Development is managed on bitbucket or github.
 https://bitbucket.org/timcera/tsgettoolbox_cdec/overview.
 https://github.com/timcera/tsgettoolbox_cdec
 
-.. _tsgettoolbox_documentation: https://timcera.bitbucket.io/tsgettoolbox/docs/index.html#tsgettoolbox-documentation_cdec
-.. _tsgettoolbox_api: https://timcera.bitbucket.io/tsgettoolbox/docs/function_summary.html
-.. _tsgettoolbox_cli: https://timcera.bitbucket.io/tsgettoolbox/docs/command_line.html
+.. _tsgettoolbox_documentation: https://timcera.bitbucket.io/linked_pkg_dirs/tsgettoolbox/docs/index.html#tsgettoolbox-documentation
+.. _tsgettoolbox CLI: https://timcera.bitbucket.io/linked_pkg_dirs/tsgettoolbox/docs/command_line.html
+.. _tsgettoolbox CDEC API: https://timcera.bitbucket.io/linked_pkg_dirs/tsgettoolbox/docs/_function_autosummary/tsgettoolbox.cdec.html
