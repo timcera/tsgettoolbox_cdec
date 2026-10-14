@@ -1,0 +1,98 @@
+.. image:: https://img.shields.io/coveralls/github/timcera/tsgettoolbox_cdec
+    :alt: Test Coverage
+    :target: https://coveralls.io/r/timcera/tsgettoolbox_cdec?branch=master
+    :height: 20
+
+.. image:: https://img.shields.io/pypi/v/tsgettoolbox_cdec
+    :alt: Latest release
+    :target: https://pypi.python.org/pypi/tsgettoolbox_cdec/
+    :height: 20
+
+.. image:: https://img.shields.io/pypi/l/tsgettoolbox_cdec
+    :alt: BSD-3 clause license
+    :target: https://pypi.python.org/pypi/tsgettoolbox_cdec/
+    :height: 20
+
+.. image:: https://img.shields.io/pypi/pyversions/tsgettoolbox_cdec
+    :alt: PyPI - Python Version
+    :target: https://pypi.org/project/tsgettoolbox_cdec/
+    :height: 20
+
+tsgettoolbox_cdec - Quick Guide
+===============================
+The 'tsgettoolbox_cdec' is a plugin-in for 'tsgettoolbox' that supplies
+a command line interface and Python library to get time-series data from the
+California Data Exchange Center (CDEC).  The tsgettoolbox_cdec will work with
+Python and 3.10+.
+
+Documentation
+-------------
+Reference documentation is at `tsgettoolbox_cdec_documentation`_.
+
+Installation
+------------
+At the command line::
+
+    $ pip install tsgettoolbox_cdec
+
+    OR
+
+    $ conda install -c conda-forge tsgettoolbox_cdec
+
+Usage Summary - Command Line
+----------------------------
+Just run 'tsgettoolbox --help' to get a list of subcommands.  To get detailed
+help for a particular sub-command, for instance 'coops', type 'tsgettoolbox
+coops --help'.
+
++-------------+---------+--------+---------+----------+-----------------------+
+| Sub-command | Spatial | Time   | Type    | Time     | Description           |
+|             | Extent  | Extent |         | Interval |                       |
++=============+=========+========+=========+==========+=======================+
+| cdec        | US/CA   | varies | station | E,H,D,M  | California Department |
+|             |         |        |         |          | of Water Resources    |
++-------------+---------+--------+---------+----------+-----------------------+
+
++-------------------+-------------+
+| Time Interval     | Description |
+| Code              |             |
++===================+=============+
+| E                 | Event       |
++-------------------+-------------+
+| T                 | Minute      |
++-------------------+-------------+
+| H                 | Hourly      |
++-------------------+-------------+
+| D                 | Daily       |
++-------------------+-------------+
+| M                 | Monthly     |
++-------------------+-------------+
+| A                 | Annual      |
++-------------------+-------------+
+
+Usage Summary - Python Library
+------------------------------
+To use the tsgettoolbox in a project::
+
+    from tsgettoolbox import tsgettoolbox
+    df = tsgettoolbox.cdec("PRA", start_date="2000-01-01", end_date="2000-02-01")
+    print(df.head())
+
+Refer to the API Documentation at `tsgettoolbox_cdec_api`_.
+
+Usage Summary - Command Line
+----------------------------
+
+    tsgettoolbox cdec --start_date 2000-01-01 --end_date 2000-02-01 "PRA" > output.csv
+
+Refer to the command line documentation at `tsgettoolbox_cli`_.
+
+Development
+~~~~~~~~~~~
+Development is managed on bitbucket or github.
+https://bitbucket.org/timcera/tsgettoolbox_cdec/overview.
+https://github.com/timcera/tsgettoolbox_cdec
+
+.. _tsgettoolbox_documentation: https://timcera.bitbucket.io/tsgettoolbox/docs/index.html#tsgettoolbox-documentation_cdec
+.. _tsgettoolbox_api: https://timcera.bitbucket.io/tsgettoolbox/docs/function_summary.html
+.. _tsgettoolbox_cli: https://timcera.bitbucket.io/tsgettoolbox/docs/command_line.html
